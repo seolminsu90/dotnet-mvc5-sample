@@ -9,7 +9,19 @@
 - .net framework 4.7.2
 - MVC 5
 
+### Route 설정 관련 메모
+
+```bash
+// 컨트롤러 메서드에 라우트 설정 가능하도록 설정(라우트 config에 추가)
+config.MapHttpAttributeRoutes(); 
+
+// 컨트롤러 메서드에 개별 라우트 경로 표기 가능
+[Route("customers/{customerId}/orders")]
+public IEnumerable<Order> GetOrdersByCustomer(int customerId) { ... }
+```
+
 
 ### 기타
 - 예제들이 구성이 다 비슷하다. EF를 사용안하는 방식을 쓸 텐데.
 - Razor Page / ASPX 관련 공부를 해야겠다.
+
